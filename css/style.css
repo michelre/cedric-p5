@@ -1,6 +1,6 @@
 @font-face{
     font-family: "attika";
-    src: url("/font/Attika/AttikaGX.ttf") format("truetype");
+    src: url("font/Attika/AttikaGX.ttf") format("truetype");
 }
 
 body{
