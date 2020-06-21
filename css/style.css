@@ -11,7 +11,7 @@ html{
 
 @font-face{
     font-family: "attika";
-    src: url("font/Attika/AttikaGX.ttf") format("truetype");
+    src: url("/font/Attika/AttikaGX.ttf") format("truetype");
 }
 
 body{
@@ -198,7 +198,7 @@ nav a:hover{
 
 .center{
     position: absolute;
-    top: 85%;
+    top: 88%;
     left: 10%;
     transform: translate(-50%, -50%);
 }
@@ -207,6 +207,47 @@ nav a:hover{
     position: absolute;
     left: 50%;
 }
+
+.center4{
+    position: absolute;
+    left: 35%;
+    top: 210vh;
+}
+
+.center7{
+    position: absolute;
+    left: 5%;
+    top: 400vh;
+}
+
+.center-cally{
+    position: absolute;
+    top: 235%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+.center-twitty{
+    position: absolute;
+    top: 330%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.center-cutty{
+    position: absolute;
+    top: 480%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-shy{
+    position: absolute;
+    top: 550%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
 
 .cloud{
     position: relative;
@@ -217,6 +258,33 @@ nav a:hover{
     box-shadow: 10px 10px rgba(0, 0, 0, 0.2),
         -10px -10px rgba(0, 0, 0, .2);
     animation: move 8s linear infinite;
+    animation-delay: 1.5s;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    top: -200px
+}
+
+.cloud a{
+    font-size: 2.3em;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    padding: 1em;
+}
+
+.cloud2{
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2),
+        -10px -10px rgba(0, 0, 0, .2);
+    animation: move 8s linear infinite;
+    animation-delay: .5s;
 }
 
 .cloud:before{
@@ -229,9 +297,35 @@ nav a:hover{
     height: 100px;
     border-radius: 50%;
     box-shadow:-10px -10px rgba(0, 0, 0, .2);
+    z-index: -1;
 }
 
 .cloud:after{
+    content: "";
+    position: absolute;
+    top: -75px;
+    right: 40px;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 10px -10px rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+.cloud2:before{
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 45px;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow:-10px -10px rgba(0, 0, 0, .2);
+}
+
+.cloud2:after{
     content: "";
     position: absolute;
     top: -75px;
@@ -266,7 +360,7 @@ nav a:hover{
 
 /*PARRALLAX EFFECT*/
 .parrallax{
-    background-image: url(/img/teddy_1.jpg);
+    background-image: url(../img/teddy_1.jpg);
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -302,14 +396,14 @@ a#scrolldown:hover{
     transition: all ease-in .2s;
 }
 
-a#scrolldown.scrolldown-invisible{
-    opacity: 1;
+a#scrolldown.scrolldownInvisible{
+    opacity: 0;
     transition: all ease-in .5s;
 }
 
 a#scrolldown.scrolldownVisible{
-    bottom: 20px;
-    opacity: 0;
+    opacity: 1;
+
 }
 
 .text{
@@ -323,7 +417,7 @@ a#scrolldown.scrolldownVisible{
 }
 
 .parrallax2{
-    background-image: url(/img/teddy_2.jpg);
+    background-image: url(../img/teddy_2.jpg);
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -332,22 +426,22 @@ a#scrolldown.scrolldownVisible{
 }
 
 .text2{
-    background-color: var(--main-link-color);
+    background-color: var(--main-blue-color);
     height: 100px;
     font-size: 3em;
 }
 
 .parrallax3{
-    background-image: url(/img/teddy_3.jpg);
+    background-image: url(../img/teddy_3.jpg);
     height: 500px;
-    background-attachment: fixed;
-    background-position: center;
+    background-attachment:fixed;
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
 .parrallax4{
-    background-image: url(/img/teddy_4.jpg);
+    background-image: url(../img/teddy_4.jpg);
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -356,7 +450,7 @@ a#scrolldown.scrolldownVisible{
 }
 
 .parrallax5{
-    background-image: url(/img/teddy_5.jpg);
+    background-image: url(../img/teddy_5.jpg);
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -398,4 +492,41 @@ footer{
 #terms-of-use a:hover{
     color: var(--main-link-color);
     color: var(--main-link-color);
+}
+
+/*SCROLLTOTOP*/
+a#scrolltotop{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    color: #FFF;
+    background:rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 20px;
+    opacity: 1;
+    z-index: 99999;
+    transition: all ease-in .2s;
+    backface-visibility: hidden;
+    text-decoration: none;
+}
+
+a#scrolltotop:before{
+    content: "\25b2";
+}
+
+a#scrolltotop:hover{
+    background: rgba(0, 0, 0, 1);
+    transition: all ease-in .2s;
+}
+
+a#scrolltotop.scrolltotopInvisible{
+    bottom: -35px;
+    opacity: 0;
+    transition: all ease-in .5s;
+}
+
+a#scrolltotop.scrolltotopVisible{
+    bottom: 20px;
+    opacity: 1;
 }

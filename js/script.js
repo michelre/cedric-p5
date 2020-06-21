@@ -17,6 +17,11 @@ cercle.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     window.onscroll = function(ev) {
-        document.getElementById('scrolldown').className = (window.pageYOffset < 20) ? "scrolldown-invisible" : "scrolldownVisible";
-    };
+        document.getElementById('scrolldown').className = (window.pageYOffset < 20) ? "scrolldownVisible" : "scrolldownInvisible";
+
+        document.getElementById('scrolltotop').className = (window.pageYOffset > 100) ? "scrolltotopVisible" : "scrolltotopInvisible";}
+
 });
+
+
+
