@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Les oursons mignons</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
         <link rel="shortcut icon" type="image/jpg" href="favicon.jpg">
     </head>
@@ -28,8 +29,16 @@
                     <li>
                         <a href="#">Accueil</a>
                     </li>
-                    <li>
-                        <a href="teddybearscollection.html">Collection</a>
+                    <li id="collection">
+                        <a href="">Collection
+                            <ul>
+                                <li><a href="teddy.html">Teddy</a></li>
+                                <li><a href="cally.html">Cally</a></li>
+                                <li><a href="twitty.html">Twitty</a></li>
+                                <li><a href="cutty.html">Cutty</a></li>
+                                <li><a href="shy.html">Shy</a></li>
+                            </ul>
+                        </a>
                     </li>
                     <li>
                         <a href="checkout.html">Mon panier <i class="fas fa-shopping-cart"></i></a>
@@ -49,8 +58,8 @@
             <div class="parrallax"  id="down"></div>
             <div class="parrallax"></div>
             <div class="parrallax"></div>
-            <div class="center2">
-                <div class="cloud">
+            <div class="center2" id="app">
+                <div class="cloud" id="nav">
                     <a href="teddy.html">Je suis Teddy</a>
                 </div>
             </div>
@@ -99,6 +108,9 @@
             <div class="parrallax5"></div>
             <div class="parrallax5"></div>
         </main>
+        <div>
+            <a id="scrolltotop" class="scrolltotopInvisible" href="#top"></a>
+        </div>
         <footer>
             <ul id="terms-of-use">
                 <li>
@@ -114,11 +126,12 @@
                     <a href="#">Plan du site</a>
                 </li>
             </ul>
-            <div>
-                    <a id="scrolltotop" class="scrolltotopInvisible" href="#top"></a>
-                </div>
         </footer>
         <script src="js/script.js"></script>
-<!--        <script src="js/scrolltotop.js"></script>-->
+        <!--
+<script src="js/vuetransition.js"></script>
+<script src="js/transition.vue"></script>
+-->
+
     </body>
 </html>

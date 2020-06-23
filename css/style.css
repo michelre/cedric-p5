@@ -18,6 +18,7 @@ body{
     margin: 0;
     font-family: "attika";
     color: var(--main-text-color);
+    background-color: rgba(0, 0, 0, 0.025);
 }
 
 header{
@@ -171,7 +172,6 @@ h2{
     border-right: 2px solid var(--main-link-color);
     padding-left: 2vh;
     padding-right: 1vh;
-
 }
 
 .menug li:first-child{
@@ -191,7 +191,33 @@ nav a{
 
 nav a:hover{
     color: #00c4ff;
+}
 
+#collection{
+    text-align: center;
+}
+
+/*TEDDIES COLLECTION LINKS*/
+#collection ul{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#collection li{
+    font-size: .8em;
+    position: relative;
+    top: -999em;
+}
+
+#collection:hover li{
+    top: auto;
+    margin-top: 3vh;
+}
+
+#collection a{
+    position: relative;
 }
 
 /*CLOUDS*/
@@ -273,6 +299,11 @@ nav a:hover{
     text-align: center;
     z-index: 1;
     padding: 1em;
+}
+
+.center-cally:hover{
+    transform: scale(2);
+    transition: transform 3s;
 }
 
 .cloud2{
@@ -461,7 +492,6 @@ a#scrolldown.scrolldownVisible{
 /*FOOTER*/
 
 footer{
-    height: 10vh;
     background-color: var(--main-bgc-color);
     position: fixed;
     bottom: 0;
@@ -469,6 +499,8 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 #terms-of-use{
@@ -530,3 +562,65 @@ a#scrolltotop.scrolltotopVisible{
     bottom: 20px;
     opacity: 1;
 }
+
+/*TEDDY PAGE*/
+
+#teddy-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#teddy-page p, #cally-page p{
+    color: #000000;
+    font-size: 2em;
+    margin: 5vh;
+    text-align: justify;
+}
+#teddy-picture{
+    margin: 2vh 5vh 5vh;
+    width: 90%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1),
+        -10px -10px rgba(255, 255, 255, 0.5);
+}
+
+#option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#color, #quantity{
+    width: 80vw;
+    height: 2vh;
+    font-size: 2em;
+    margin: 1vh 0;
+}
+
+#button-layout{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 2vh 5vh 15vh 5vh;
+}
+button{
+    width: 10vh;
+    height: 2vh;
+}
+
+#cally-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cally-page img{
+    width: 90%;
+}
+
+
+
+
+
