@@ -4,13 +4,21 @@
         <meta charset="UTF-8">
         <title>Les oursons mignons</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/jpg" href="favicon.jpg">
     </head>
     <body>
-        <header>
+        <header href="#top">
+            <div class="center">
+                <div class="cloud"></div>
+            </div>
+            <div class="center2">
+                <div class="cloud2"></div>
+            </div>
             <img src="/img/teddy-bear.svg" alt="">
             <h1>OrinoToy</h1>
-            <h2>Teddy Bears Collection</h2>
+            <h2>Oursons de collection</h2>
             <nav>
                 <div class="cercle">
                     <div class="burger">
@@ -21,8 +29,16 @@
                     <li>
                         <a href="#">Accueil</a>
                     </li>
-                    <li>
-                        <a href="teddybearscollection.html">Collection</a>
+                    <li id="collection">
+                        <a href="">Collection
+                            <ul>
+                                <li><a href="teddy.html">Teddy</a></li>
+                                <li><a href="cally.html">Cally</a></li>
+                                <li><a href="twitty.html">Twitty</a></li>
+                                <li><a href="cutty.html">Cutty</a></li>
+                                <li><a href="shy.html">Shy</a></li>
+                            </ul>
+                        </a>
                     </li>
                     <li>
                         <a href="checkout.html">Mon panier <i class="fas fa-shopping-cart"></i></a>
@@ -33,6 +49,12 @@
                 </ul>
             </nav>
         </header>
+        <main>
+
+        </main>
+        <div>
+            <a id="scrolltotop" class="scrolltotopInvisible" href="#top"></a>
+        </div>
         <footer>
             <ul id="terms-of-use">
                 <li>

@@ -234,7 +234,7 @@ nav a:hover{
     left: 50%;
 }
 
-.center4{
+#center4{
     position: absolute;
     left: 35%;
     top: 210vh;
@@ -292,12 +292,62 @@ nav a:hover{
     top: -200px
 }
 
+#center-mouse{
+    position: absolute;
+    left: 17.5%;
+    top: 21vh;
+}
+
+.cloud-mouse{
+    position: relative;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2),
+        -2px -2px rgba(0, 0, 0, .2);
+    animation: move 8s linear infinite;
+    animation-delay: .25s;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    top: -20px
+}
+
+.cloud-mouse:before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 9px;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow:-1px -1px rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+.cloud-mouse:after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 1px -1px rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+
 .cloud a{
     font-size: 2.3em;
     color: #000;
     text-decoration: none;
     text-align: center;
-    z-index: 1;
+    z-index: 10;
     padding: 1em;
 }
 
@@ -391,7 +441,7 @@ nav a:hover{
 
 /*PARRALLAX EFFECT*/
 .parrallax{
-    background-image: url(../img/teddy_1.jpg);
+/*    background-image: url(../img/teddy_1.jpg);*/
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -439,7 +489,7 @@ a#scrolldown.scrolldownVisible{
 
 .text{
     background-color: var(--main-bgc-color);
-    height: 1000px;
+    height: 500px;
     font-size: 3em;
     display: flex;
     justify-content: center;
@@ -448,7 +498,7 @@ a#scrolldown.scrolldownVisible{
 }
 
 .parrallax2{
-    background-image: url(../img/teddy_2.jpg);
+/*    background-image: url(../img/teddy_2.jpg);*/
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -463,7 +513,7 @@ a#scrolldown.scrolldownVisible{
 }
 
 .parrallax3{
-    background-image: url(../img/teddy_3.jpg);
+/*    background-image: url(../img/teddy_3.jpg);*/
     height: 500px;
     background-attachment:fixed;
     background-position:center;
@@ -472,7 +522,7 @@ a#scrolldown.scrolldownVisible{
 }
 
 .parrallax4{
-    background-image: url(../img/teddy_4.jpg);
+/*    background-image: url(../img/teddy_4.jpg);*/
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -481,7 +531,7 @@ a#scrolldown.scrolldownVisible{
 }
 
 .parrallax5{
-    background-image: url(../img/teddy_5.jpg);
+/*    background-image: url(../img/teddy_5.jpg);*/
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -618,6 +668,12 @@ button{
 
 #cally-page img{
     width: 90%;
+}
+
+#info
+{
+    display: none;
+/*    background-color: var(--main-blue-color);*/
 }
 
 
