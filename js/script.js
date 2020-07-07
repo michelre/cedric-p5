@@ -1,7 +1,5 @@
 const burger = document.querySelector('.burger');
-
 const cercle = document.querySelector('.cercle');
-
 const menu = document.querySelector('.menug');
 
 burger.addEventListener('click', () => {
@@ -14,23 +12,24 @@ cercle.addEventListener('click', () => {
 
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     window.onscroll = function(ev) {
         document.getElementById('scrolldown').className = (window.pageYOffset < 20) ? "scrolldownVisible" : "scrolldownInvisible";
 
+        document.getElementById('down').className = (window.pageYOffset < 18) ? "textVisible" : "textInvisible";
+
         document.getElementById('scrolltotop').className = (window.pageYOffset > 100) ? "scrolltotopVisible" : "scrolltotopInvisible";}
-});
+        });
 
-function souris(event)
-{
-    var x = event.clientX;
-    var y = event.clientY;
-    document.getElementById('coordonnes').value = x + ', ' + y;
+//MENU BURGER TEDDIES
 
-    var element = document.getElementById('center-mouse');
-    element.style.position = 'absolute';
-    element.style.left = x + 'px';
-    element.style.top = y + 'px';
+const showTeddies = document.querySelector('#collection');
+var teddiesList = document.querySelector('#collection-name');
+
+console.log(teddiesList)
+
+showTeddies.onclick = function() {
+    teddiesList.querySelector('li').style.top = 'auto';
 }
+
 

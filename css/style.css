@@ -1,3 +1,8 @@
+@font-face{
+    font-family: "attika";
+    src: url("/font/Attika/AttikaGX.ttf") format("truetype");
+}
+
 :root{
     --main-blue-color: #0087af;
     --main-bgc-color: #0087af;
@@ -8,12 +13,6 @@
 html{
     scroll-behavior: smooth;
 }
-
-@font-face{
-    font-family: "attika";
-    src: url("/font/Attika/AttikaGX.ttf") format("truetype");
-}
-
 body{
     margin: 0;
     font-family: "attika";
@@ -69,7 +68,6 @@ h2{
 /*MENU BURGER*/
 
 .cercle{
-    /*    background-image:url(/img/teddy-bear.svg);*/
     width: 8vh;
     height: 8vh;
     display: flex;
@@ -169,14 +167,14 @@ h2{
 .menug li{
     font-size: 2.3em;
     display: inline-block;
-    border-right: 2px solid var(--main-link-color);
+    /* border-right: 2px solid var(--main-link-color); */
     padding-left: 2vh;
     padding-right: 1vh;
 }
 
-.menug li:first-child{
+/* .menug li:first-child{
     border-left: 2px solid var(--main-link-color);
-}
+} */
 
 nav{
     display: flex;
@@ -205,19 +203,17 @@ nav a:hover{
     transform: translateX(-50%);
 }
 
-#collection li{
+#collection-name li{
     font-size: .8em;
     position: relative;
+    display: block;
+    transform: translateX(-82%);
     top: -999em;
 }
 
-#collection:hover li{
-    top: auto;
-    margin-top: 3vh;
-}
-
-#collection a{
-    position: relative;
+#collection-name{
+    margin-top: 1vh;
+    text-align: left;
 }
 
 /*CLOUDS*/
@@ -246,7 +242,7 @@ nav a:hover{
     top: 400vh;
 }
 
-.center-cally{
+/* .center-cally{
     position: absolute;
     top: 235%;
     left: 12%;
@@ -272,7 +268,7 @@ nav a:hover{
     top: 550%;
     left: 75%;
     transform: translate(-50%, -50%);
-}
+} */
 
 
 .cloud{
@@ -289,7 +285,7 @@ nav a:hover{
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    top: -200px
+    top: 10vh;
 }
 
 #center-mouse{
@@ -312,7 +308,7 @@ nav a:hover{
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    top: -20px
+    top: -20px;
 }
 
 .cloud-mouse:before{
@@ -441,8 +437,7 @@ nav a:hover{
 
 /*PARRALLAX EFFECT*/
 .parrallax{
-/*    background-image: url(../img/teddy_1.jpg);*/
-    height: 500px;
+    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -487,24 +482,32 @@ a#scrolldown.scrolldownVisible{
 
 }
 
-.text{
+#down{
     background-color: var(--main-bgc-color);
-    height: 500px;
-    font-size: 3em;
+    /* height: 20vh; */
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.parrallax2{
-/*    background-image: url(../img/teddy_2.jpg);*/
+#down.textVisible{
+    opacity: 1;
+}
+
+#down.textInvisible{
+    opacity: 0;
+    transition: all ease-in .2s;
+}
+
+/* .parrallax2{
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .text2{
     background-color: var(--main-blue-color);
@@ -512,32 +515,29 @@ a#scrolldown.scrolldownVisible{
     font-size: 3em;
 }
 
-.parrallax3{
-/*    background-image: url(../img/teddy_3.jpg);*/
+/* .parrallax3{
     height: 500px;
     background-attachment:fixed;
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
-}
+} */
 
-.parrallax4{
-/*    background-image: url(../img/teddy_4.jpg);*/
+/* .parrallax4{
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
-.parrallax5{
-/*    background-image: url(../img/teddy_5.jpg);*/
+/* .parrallax5{
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 /*FOOTER*/
 
@@ -611,63 +611,6 @@ a#scrolltotop.scrolltotopInvisible{
 a#scrolltotop.scrolltotopVisible{
     bottom: 20px;
     opacity: 1;
-}
-
-/*TEDDY PAGE*/
-
-#teddy-page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#teddy-page p, #cally-page p{
-    color: #000000;
-    font-size: 2em;
-    margin: 5vh;
-    text-align: justify;
-}
-#teddy-picture{
-    margin: 2vh 5vh 5vh;
-    width: 90%;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.1),
-        -10px -10px rgba(255, 255, 255, 0.5);
-}
-
-#option{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#color, #quantity{
-    width: 80vw;
-    height: 2vh;
-    font-size: 2em;
-    margin: 1vh 0;
-}
-
-#button-layout{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 2vh 5vh 15vh 5vh;
-}
-button{
-    width: 10vh;
-    height: 2vh;
-}
-
-#cally-page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#cally-page img{
-    width: 90%;
 }
 
 #info
