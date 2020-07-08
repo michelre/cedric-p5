@@ -18,6 +18,7 @@ body{
     font-family: "attika";
     color: var(--main-text-color);
     background-color: rgba(0, 0, 0, 0.025);
+    max-width: 100vw;
 }
 
 header{
@@ -27,27 +28,26 @@ header{
     -ms-align-items: center;
     align-items: center;
     background: var(--main-bgc-color);
-    height: 18%;
-    padding-top: 6%;
 }
 
 img{
-    width: 30%;
+    width: 50%;
+    margin-top: 5vh;
 }
 
 h1{
-    font-size: 10em;
+    font-size: 5em;
     margin: 0;
     position: relative;
     color: var(--main-link-color);
-    text-shadow: 0 4px 0 #00ecff, 0 -4px 0 #ff4045;
+    text-shadow: 0 2px 0 #00ecff, 0 -2px 0 #ff4045;
 }
 
 h1:before{
     content: "OrinoToy";
     position: absolute;
     color: var(--main-blue-color);
-    transform: translateY(10px) translateX(-15px);
+    transform: translateY(5px) translateX(-7.5px);
 }
 
 h1:after{
@@ -55,14 +55,19 @@ h1:after{
     position: absolute;
     /*    color: #00ff00;*/
     color: var(--main-text-color);
-    left: 15px;
+    left: 7.5px;
 
 }
 
 h2{
-    font-size: 2em;
+    font-size: 1em;
     margin: 0;
     color: #000000;
+}
+
+#welcomeText{
+    padding: 0 1vh;
+
 }
 
 /*MENU BURGER*/
@@ -75,23 +80,23 @@ h2{
     align-items: center;
     transition: transform .3s ease-in-out;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1vh;
+    right: 2vh;
 }
 
 .cercle.active{
-    transform: scale(.5);
+    transform: scale(.6);
 }
 .burger{
-    width: 80px;
-    height: 96px;
+    width: 60px;
+    height: 28px;
     cursor: pointer;
     position: relative;
 }
 
 .burger span{
     width: 100%;
-    height: 12px;
+    height: 10px;
     background-color: #000;
     display: block;
     position: absolute;
@@ -109,7 +114,7 @@ h2{
     content: "";
     position: absolute;
     width: 100%;
-    height: 12px;
+    height: 10px;
     background-color: #000;
     -webkit-transition: transform .1s ease-in-out;
     -o-transition: transform .1s ease-in-out;
@@ -120,14 +125,14 @@ h2{
     -webkit-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     -o-transform: translateY(-15px);
-    transform: translateY(-17px);
+    transform: translateY(-15px);
 }
 
 .burger span::after{
     -webkit-transform: translateY(15px);
     -ms-transform: translateY(15px);
     -o-transform: translateY(15px);
-    transform: translateY(17px);
+    transform: translateY(15px);
 }
 
 .burger.active span{
@@ -138,43 +143,37 @@ h2{
     -webkit-transform: translateY(0px) rotateZ(45deg);
     -ms-transform: translateY(0px) rotateZ(45deg);
     -o-transform: translateY(0px) rotateZ(45deg);
-    transform: translateY(0px) rotateZ(45deg) scale(.9);
+    transform: translateY(0px) rotateZ(45deg) scale(.8);
 }
 
 .burger.active span::after{
     -webkit-transform: translateY(0px) rotateZ(-45deg);
     -ms-transform: translateY(0px) rotateZ(-45deg);
     -o-transform: translateY(0px) rotateZ(-45deg);
-    transform: translateY(0px) rotateZ(-45deg) scale(.9);
+    transform: translateY(0px) rotateZ(-45deg) scale(.8);
 }
 
 /*MENU*/
 
 .menug{
-    opacity: 0;
+    display: none;
     list-style: none;
-    margin-top: 5%;
     padding: 0;
-    -webkit-transition: opacity .6s ease-in-out;
+    /* -webkit-transition: opacity .6s ease-in-out;
     -o-transition: opacity .6s ease-in-out;
-    transition: opacity .6s ease-in-out;
+    transition: opacity .6s ease-in-out; */
 }
 
 .menug.active{
-    opacity: 1;
+    display: initial;
 }
 
 .menug li{
-    font-size: 2.3em;
+    font-size: .9em;
     display: inline-block;
-    /* border-right: 2px solid var(--main-link-color); */
-    padding-left: 2vh;
+    padding-left: 1vh;
     padding-right: 1vh;
 }
-
-/* .menug li:first-child{
-    border-left: 2px solid var(--main-link-color);
-} */
 
 nav{
     display: flex;
@@ -192,7 +191,7 @@ nav a:hover{
 }
 
 #collection{
-    text-align: center;
+    text-align: left;
 }
 
 /*TEDDIES COLLECTION LINKS*/
@@ -204,7 +203,7 @@ nav a:hover{
 }
 
 #collection-name li{
-    font-size: .8em;
+    font-size: .9em;
     position: relative;
     display: block;
     transform: translateX(-82%);
@@ -220,14 +219,21 @@ nav a:hover{
 
 .center{
     position: absolute;
-    top: 88%;
-    left: 10%;
+    top: 115%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 
 .center2{
     position: absolute;
-    left: 50%;
+    left: 40%;
+}
+
+.center3{
+    position: absolute;
+    top: 235%;
+    left: 22%;
+    transform: translate(-50%, -50%);
 }
 
 #center4{
@@ -239,53 +245,39 @@ nav a:hover{
 .center7{
     position: absolute;
     left: 5%;
-    top: 400vh;
+    top: 420vh;
 }
 
-/* .center-cally{
-    position: absolute;
-    top: 235%;
-    left: 12%;
-    transform: translate(-50%, -50%);
-}
-
-.center-twitty{
+.center-lenny{
     position: absolute;
     top: 330%;
-    left: 75%;
+    left: 40%;
     transform: translate(-50%, -50%);
 }
 
-.center-cutty{
+.center-garfunkel{
     position: absolute;
-    top: 480%;
-    left: 50%;
+    top: 485%;
+    left: 30%;
     transform: translate(-50%, -50%);
 }
-
-.center-shy{
-    position: absolute;
-    top: 550%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-} */
 
 
 .cloud{
     position: relative;
-    width: 300px;
-    height: 100px;
+    width: 150px;
+    height: 50px;
     border-radius: 50px;
     background-color: #fff;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.2),
-        -10px -10px rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2),
+        -5px -5px rgba(0, 0, 0, .2);
     animation: move 8s linear infinite;
     animation-delay: 1.5s;
     display: flex;
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    top: 10vh;
+    top: 5vh;
 }
 
 #center-mouse{
@@ -339,79 +331,79 @@ nav a:hover{
 
 
 .cloud a{
-    font-size: 2.3em;
+    font-size: 1.4em;
     color: #000;
     text-decoration: none;
     text-align: center;
-    z-index: 10;
+    z-index: 1;
     padding: 1em;
 }
 
-.center-cally:hover{
+.cloud:hover{
     transform: scale(2);
     transition: transform 3s;
-}
-
-.cloud2{
-    position: relative;
-    width: 300px;
-    height: 100px;
-    border-radius: 50px;
-    background-color: #fff;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.2),
-        -10px -10px rgba(0, 0, 0, .2);
-    animation: move 8s linear infinite;
-    animation-delay: .5s;
 }
 
 .cloud:before{
     content: "";
     position: absolute;
-    top: -50px;
-    left: 45px;
+    top: -25px;
+    left: 22.5px;
     background-color: #fff;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    box-shadow:-10px -10px rgba(0, 0, 0, .2);
+    box-shadow:-5px -5px rgba(0, 0, 0, .2);
     z-index: -1;
 }
 
 .cloud:after{
     content: "";
     position: absolute;
-    top: -75px;
-    right: 40px;
+    top: -37.5px;
+    right: 20px;
     background-color: #fff;
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    box-shadow: 10px -10px rgba(0, 0, 0, .2);
+    box-shadow: 5px -5px rgba(0, 0, 0, .2);
     z-index: -1;
+}
+
+.cloud2{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2),
+        -5px -5px rgba(0, 0, 0, .2);
+    animation: move 8s linear infinite;
+    animation-delay: .5s;
 }
 
 .cloud2:before{
     content: "";
     position: absolute;
-    top: -50px;
-    left: 45px;
+    top: -25px;
+    left: 22.5px;
     background-color: #fff;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    box-shadow:-10px -10px rgba(0, 0, 0, .2);
+    box-shadow:-5px -5px rgba(0, 0, 0, .2);
 }
 
 .cloud2:after{
     content: "";
     position: absolute;
-    top: -75px;
-    right: 40px;
+    top: -37.5px;
+    right: 20px;
     background-color: #fff;
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    box-shadow: 10px -10px rgba(0, 0, 0, .2);
+    box-shadow: 5px -5px rgba(0, 0, 0, .2);
 }
 
 @keyframes move{
@@ -449,9 +441,9 @@ nav a:hover{
 /*SCROLL DOWN 1st TEDDY*/
 a#scrolldown{
     position: fixed;
-    padding: 10px;
+    padding: 1Opx;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 25px;
     text-align: center;
     color: #FFF;
     background:rgba(0, 0, 0, 0.25);
@@ -482,10 +474,10 @@ a#scrolldown.scrolldownVisible{
 
 }
 
-#down{
+.textVisible{
     background-color: var(--main-bgc-color);
     /* height: 20vh; */
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -498,46 +490,9 @@ a#scrolldown.scrolldownVisible{
 
 #down.textInvisible{
     opacity: 0;
-    transition: all ease-in .2s;
+    transition: all ease-in .3s;
+    
 }
-
-/* .parrallax2{
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-.text2{
-    background-color: var(--main-blue-color);
-    height: 100px;
-    font-size: 3em;
-}
-
-/* .parrallax3{
-    height: 500px;
-    background-attachment:fixed;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size:cover;
-} */
-
-/* .parrallax4{
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-/* .parrallax5{
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
 /*FOOTER*/
 
@@ -549,8 +504,8 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 #terms-of-use{
@@ -561,7 +516,7 @@ footer{
 }
 #terms-of-use li{
     display: inline;
-    font-size: 1.8em;
+    font-size: .7em;
     padding-left: 1vh;
     padding-right: 1vh;
 }
@@ -579,13 +534,13 @@ footer{
 /*SCROLLTOTOP*/
 a#scrolltotop{
     border-radius: 10px;
-    padding: 10px;
-    font-size: 50px;
+    padding: 5px;
+    font-size: 25px;
     text-align: center;
     color: #FFF;
     background:rgba(0, 0, 0, 0.25);
     position: fixed;
-    right: 20px;
+    right: 10px;
     opacity: 1;
     z-index: 99999;
     transition: all ease-in .2s;
@@ -601,7 +556,7 @@ a#scrolltotop:hover{
     background: rgba(0, 0, 0, 1);
     transition: all ease-in .2s;
 }
-
+/* corriger la hauteur du bottom */
 a#scrolltotop.scrolltotopInvisible{
     bottom: -35px;
     opacity: 0;
@@ -609,7 +564,7 @@ a#scrolltotop.scrolltotopInvisible{
 }
 
 a#scrolltotop.scrolltotopVisible{
-    bottom: 20px;
+    bottom: 75px;
     opacity: 1;
 }
 
@@ -618,6 +573,7 @@ a#scrolltotop.scrolltotopVisible{
     display: none;
 /*    background-color: var(--main-blue-color);*/
 }
+
 
 
 
