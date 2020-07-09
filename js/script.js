@@ -28,8 +28,31 @@ var teddiesList = document.querySelector('#collection-name');
 
 console.log(teddiesList)
 
+showTeddies.onmouseover = function() {
+        teddiesList.querySelector('li').style.top = 'auto';
+};
+showTeddies.onmouseout = function() {
+        teddiesList.querySelector('li').style.top = '-999em';
+};
+
+
+
 showTeddies.onclick = function() {
     teddiesList.querySelector('li').style.top = 'auto';
-}
+};
 
+const menuColor = document.querySelector('#account');
+const cartColor = document.querySelector('#cart');
+const userColor = document.querySelector('#user');
 
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 400) {
+        menuColor.style.color = 'black';
+        cartColor.style.color = 'black';
+        userColor.style.color = 'black';
+    }else{
+        menuColor.style.color = 'white';
+        cartColor.style.color = 'white';
+        userColor.style.color = 'white';
+    }
+});
