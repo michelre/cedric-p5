@@ -6,7 +6,7 @@ teddies.then(function (response) {
     for(let product of response) {
         collectionName.innerHTML += 
             `<li>
-                <a href="${product.name}">${product.name}</a>
+                <a href="collection.html?id=${product._id}">${product.name}</a>
             </li>`
     }
 
