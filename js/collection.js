@@ -52,28 +52,44 @@ teddies.then(function (response) {
                 option.value = colorChoice[i];
                 option.innerHTML = colorChoice[i];
                 select.appendChild(option);
+                choice = select.selectedIndex  // Récupération de l'index du <option> choisi
+                valeur_cherchee = select.options[choice].value;
 
-            // localStorage.setItem('colorChoice', document.querySelector('#color-select option').value);
-            // localStorage.setItem('teddyChoice', teddyChoice);
+                // localStorage.setItem('colorChoice', document.querySelector('#color-select option').value);
+                // localStorage.setItem('teddyChoice', teddyChoice);
 
             }
 
             let teddyChoice = (response._id);
-                let selectedColor = document.querySelector('#color-select option');
-                const product = [
-                    id = teddyChoice,
-                    color = selectedColor.value,
-                ];
+            // var selectedColor = change_valeur();
+            // colorChoice = document.querySelector('#color-select').options.selectedIndex;
 
-                if(!localStorage.getItem('product')) {
-                    populateStorage();
-                  }
+            // console.log(selectedColor)
+            console.log(colorChoice)
 
-                function populateStorage() {
-                    localStorage.setItem('teddyChoice', teddyChoice);
-                    localStorage.setItem('colorChoice', selectedColor.value);
-                }
+            const product = [
+                selectedTeddy = teddyChoice,
+                teddyColor = valeur_cherchee,
+            ]
 
-        }
-        )
+            // function change_valeur() {
+            //     select = document.querySelector("#color-select");
+            //     choice = select.selectedIndex  // Récupération de l'index du <option> choisi
+            //     valeur_cherchee = select.options[choice].value; // Récupération du texte du <option> d'index "choice"
+
+            console.log(valeur_cherchee)
+
+            const addCart = document.querySelector('.add');
+
+            addCart.addEventListener('click', () => {
+                localStorage.setItem('teddyChoice', teddyChoice);
+                localStorage.setItem('colorChoice', valeur_cherchee);
+                localStorage.setItem('addToCart', product);
+
+            })
+        });
+
+
+
+
 })
