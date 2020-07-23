@@ -18,7 +18,7 @@
             <div class="center2">
                 <div class="cloud2"></div>
             </div>
-            <img src="/img/teddy-bear.svg" alt="">
+            <img src="./img/teddy-bear.svg" alt="">
             <h1>OrinoToy</h1>
             <h2>Oursons de collection</h2>
             <nav>
@@ -29,9 +29,9 @@
                 </div>
                 <ul class=menug>
                     <li>
-                        <a href="#">Accueil</a>
+                        <a href="index.html">Accueil</a>
                     </li>
-                    <li id="collection">
+                    <li id="collection" onClick="asideswipe()">
                         <a href="#">Collection
                             <ul id="collection-name"></ul>
                         </a>
@@ -46,6 +46,9 @@
             </nav>
         </header>
         <main>
+            <div id="down" class="textVisible">
+                <!-- <h2 id="welcomeText">Bienvenue sur le site de OrinoToy, le paradis des oursons mignons.<br><br>Découvre notre collection :</h2> -->
+            </div>
             
         </main>
         <div>
@@ -73,7 +76,7 @@
         <script src="js/ajax.js"></script>
         <script src="js/collection.js"></script>
         <script src="js/script.js"></script>
-        <script src="js/souris.js"></script>
+        <!-- <script src="js/souris.js"></script> -->
     </body>
 </html>
 

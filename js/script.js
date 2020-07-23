@@ -24,22 +24,24 @@ document.addEventListener('DOMContentLoaded', function() {
 //MENU BURGER TEDDIES
 
 const showTeddies = document.querySelector('#collection');
-var teddiesList = document.querySelector('#collection-name');
-
-console.log(teddiesList)
 
 showTeddies.onmouseover = function() {
-        teddiesList.querySelector('li').style.top = 'auto';
+        document.querySelector('#collection ul').style.display = 'block';
 };
 showTeddies.onmouseout = function() {
-        teddiesList.querySelector('li').style.top = '-999em';
+        document.querySelector('#collection ul').style.display = 'none';
 };
 
-
-
-showTeddies.onclick = function() {
-    teddiesList.querySelector('li').style.top = 'auto';
-};
+function asideswipe()   {
+    var listName = document.querySelector('#collection ul'),
+    display = getComputedStyle(listName, null).display;
+     
+    if(display == "block")  {
+        document.querySelector("#collection ul").style.display = "none";
+    }else   {
+        document.querySelector("#collection ul").style.display = "block";
+    }
+} 
 
 const menuColor = document.querySelector('#account');
 const cartColor = document.querySelector('#cart');

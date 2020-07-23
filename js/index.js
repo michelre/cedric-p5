@@ -19,7 +19,7 @@ teddies.then(function (response) {
             </div>
             <div class="center2" style="">
                 <div class="cloud" id="nav">
-                    <a href="${product._id}">${product.name}</a>
+                    <a href="collection.html?id=${product._id}">${product.name}</a>
                 </div>
             </div>`
     }
