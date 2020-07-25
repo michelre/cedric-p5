@@ -15,14 +15,9 @@ teddies.then(function (response) {
 
     getTeddy(params.get("id"))
         .then(function (response) {
-            console.log(response)
-
             const main = document.querySelector("main")
             let goodPrice = Math.round(response.price) / 100;
             let formatPrice = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(goodPrice)
-
-            // console.log(goodPrice)
-            // console.log(typeof goodPrice)
 
             main.innerHTML +=
                 `<div id="collection_scrolldown">
@@ -45,47 +40,27 @@ teddies.then(function (response) {
                 </div>
             </div>`
 
-            let colorChoice = (response.colors);
-            select = document.querySelector('#color-select');
+            const colorChoice = (response.colors);
+            const select = document.querySelector('#color-select');
             for (let i = 0; i < colorChoice.length; i++) {
                 let option = document.createElement('option');
                 option.value = colorChoice[i];
                 option.innerHTML = colorChoice[i];
                 select.appendChild(option);
-                choice = select.selectedIndex  // Récupération de l'index du <option> choisi
-                valeur_cherchee = select.options[choice].value;
-
-                // localStorage.setItem('colorChoice', document.querySelector('#color-select option').value);
-                // localStorage.setItem('teddyChoice', teddyChoice);
-
             }
 
-            let teddyChoice = (response._id);
-            // var selectedColor = change_valeur();
-            // colorChoice = document.querySelector('#color-select').options.selectedIndex;
-
-            // console.log(selectedColor)
-            console.log(colorChoice)
-
-            const product = [
-                selectedTeddy = teddyChoice,
-                teddyColor = valeur_cherchee,
-            ]
-
-            // function change_valeur() {
-            //     select = document.querySelector("#color-select");
-            //     choice = select.selectedIndex  // Récupération de l'index du <option> choisi
-            //     valeur_cherchee = select.options[choice].value; // Récupération du texte du <option> d'index "choice"
-
-            console.log(valeur_cherchee)
 
             const addCart = document.querySelector('.add');
 
-            addCart.addEventListener('click', () => {
-                localStorage.setItem('teddyChoice', teddyChoice);
-                localStorage.setItem('colorChoice', valeur_cherchee);
-                localStorage.setItem('addToCart', product);
-
+            addCart.addEventListener('click', (e) => {
+                e.preventDefault();
+                const product = {
+                    selectedTeddy: response._id,
+                    teddyColor: select.value
+                }
+                const cart = JSON.parse(localStorage.getItem('cart')) || []
+                cart.push(product)
+                localStorage.setItem('cart', JSON.stringify(cart));
             })
         });
 
