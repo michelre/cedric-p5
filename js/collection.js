@@ -54,12 +54,33 @@ teddies.then(function (response) {
 
             addCart.addEventListener('click', (e) => {
                 e.preventDefault();
+
+                const toto = {
+                    '83ZUEUZUZUEZ-Tan': {
+                        id: '',
+                        color: '',
+                        quantity: 5
+                    }
+                }
+
+
                 const product = {
                     selectedTeddy: response._id,
                     teddyColor: select.value
                 }
-                const cart = JSON.parse(localStorage.getItem('cart')) || []
-                cart.push(product)
+                const cart = JSON.parse(localStorage.getItem('cart')) || {}
+                const key = `${product.selectedTeddy}-${product.teddyColor}`
+                let quantity = 1
+                if(cart[key]){
+                    quantity = cart[key]['quantity'] + 1
+                }
+
+                cart[key] = {
+                    ...response,
+                    quantity,
+                    color: select.value
+                }
+
                 localStorage.setItem('cart', JSON.stringify(cart));
             })
         });

@@ -13,13 +13,24 @@ cercle.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    window.onscroll = function(ev) {
-        document.getElementById('scrolldown').className = (window.pageYOffset < 20) ? "scrolldownVisible" : "scrolldownInvisible";
+    window.onscroll = function (ev) {
+        const scrollDown = document.getElementById('scrolldown')
+        if (scrollDown) {
+            scrollDown.className = (window.pageYOffset < 20) ? "scrolldownVisible" : "scrolldownInvisible";
+        }
 
-        document.getElementById('down').className = (window.pageYOffset < 18) ? "textVisible" : "textInvisible";
+        const down = document.getElementById('down')
+        if(down){
+            down.className = (window.pageYOffset < 18) ? "textVisible" : "textInvisible";
+        }
 
-        document.getElementById('scrolltotop').className = (window.pageYOffset > 100) ? "scrolltotopVisible" : "scrolltotopInvisible";}
-        });
+
+        const scrollTop = document.getElementById('scrolltotop')
+        if (scrollTop) {
+            scrollTop.className = (window.pageYOffset > 100) ? "scrolltotopVisible" : "scrolltotopInvisible";
+        }
+    }
+});
 
 //MENU BURGER TEDDIES
 
@@ -45,7 +56,7 @@ function asideswipe()   {
 
 const cartColor = document.querySelector('#cart');
 const userColor = document.querySelector('#user');
-
+const menuColor = {}
 window.addEventListener('scroll', () => {
     if(window.pageYOffset > 400) {
         menuColor.style.color = 'black';
