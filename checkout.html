@@ -29,7 +29,7 @@
                 </div>
                 <ul class=menug>
                     <li>
-                        <a href="#">Accueil</a>
+                        <a href="index.html">Accueil</a>
                     </li>
                     <li id="collection" onClick="asideswipe()">
                         <a href="#">Collection
@@ -39,14 +39,13 @@
                     <li>
                         <a href="checkout.html"><i id="cart" class="fas fa-shopping-cart"></i> Mon panier</a>
                     </li>
-                    <li>
-                        <a id="account" href="account.html"><i id="user" class="fas fa-user"></i>Connexion</a>
-                    </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div id="cart-container"></div>
+            <div id="cart-container">
+                <table id="order"></table>
+            </div>
             <form id="form">
                 <div>
                     <label>Nom:</label>

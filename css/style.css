@@ -74,7 +74,6 @@ h2{
 
 #welcomeText{
     padding: 0 1vh;
-
 }
 
 /*MENU BURGER*/
@@ -688,6 +687,40 @@ label{
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
+#cart-container{
+    height: 10vh;
+    color: black;
+    margin: 2vh 2vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#order td, #order{
+    border: 1px black solid;
+}
+
+.orderQuantityPlus{
+    border: 1px black solid;
+    height: 2vh;
+    width: 2vh;
+    margin-left: 1vh;
+    color: black;
+}
+
+.orderQuantityMinus{
+    border: 1px black solid;
+    height: 2vh;
+    width: 2vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    color: black;
+}
+
+button.text{
+    color: black;
+}
 
 
 /* Small devices (landscape phones, 576px and up) */
@@ -727,6 +760,10 @@ label{
         display: initial;
     }
 
+    #collection-name{
+        margin-top: .2vh;
+    }
+
     .menug > li:nth-child(4), .menug > li:nth-child(3){
         position: fixed;
         top: 1vh;
@@ -738,21 +775,21 @@ label{
     }
 
     .menug > li:nth-child(3){
-        right: -8%;
+        right: 2vh;
     }
 
     /* .menug li:nth-child(3) a{
         color: transparent;
     } */
 
-    .menug li:nth-child(4) i, .menug li:nth-child(3) i{
+    .menug li:nth-child(3) i{
         color: #ffffff;
         font-size: 1.5em;
-        
+        padding-right: 1vh;        
     }
 
-    .menug li:nth-child(4) i{
-        padding-right: 1vh;
+    #welcomeText{
+        margin-top: 2vh;
     }
     
 }

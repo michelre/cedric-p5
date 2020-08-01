@@ -43,7 +43,6 @@ function asideswipe()   {
     }
 } 
 
-const menuColor = document.querySelector('#account');
 const cartColor = document.querySelector('#cart');
 const userColor = document.querySelector('#user');
 
